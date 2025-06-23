@@ -78,5 +78,5 @@ class MainActivity : AppCompatActivity() {
     // 扩展函数：简化Fragment实例化
     private fun <T : Fragment> Class<T>.newInstance(): T {
         return newInstance() as T
-    }
+    }//djiiojdo
 }
