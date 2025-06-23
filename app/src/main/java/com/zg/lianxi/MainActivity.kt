@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         // 设置底部导航
         setupBottomNavigation()
-
+        //先add 右键要单机两次 我在演示一下 你看看
         // 默认显示动态页
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, FeedFragment())
