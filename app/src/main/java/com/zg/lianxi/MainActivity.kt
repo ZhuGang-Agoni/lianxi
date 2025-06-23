@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             number = 1
             isVisible = true
         }
-    }
+    }//fdrferwr3r4t5t5t5t
 
     // 扩展函数：简化Fragment实例化
     private fun <T : Fragment> Class<T>.newInstance(): T {
