@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         // 设置底部导航
         setupBottomNavigation()
-
+//爹积极为hi
         // 默认显示动态页
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, FeedFragment())
