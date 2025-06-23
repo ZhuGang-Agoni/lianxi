@@ -20,5 +20,5 @@
 			<com.google.android.material.textfield.TextInputEditText android:id="@+id/message_input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="输入你的问题..." android:inputType="textMultiLine" android:maxLines="3"/>
 		</com.google.android.material.textfield.TextInputLayout>
 		<com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/send_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_send" app:backgroundTint="@color/primary" app:tint="@color/white"/>
-	</LinearLayout>
+	</LinearLayout>uegduig1q
 </androidx.constraintlayout.widget.ConstraintLayout>
