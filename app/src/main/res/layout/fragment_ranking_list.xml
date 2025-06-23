@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fillViewport="true">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingBottom="24dp">
+
+		<!-- 个人排名摘要卡片 -->
+		<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="12dp"
+			app:cardElevation="4dp">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="16dp">
+
+				<TextView
+					android:id="@+id/tvMyRankLabel"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="我的排名"
+					android:textColor="@color/text_grey"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/tvMyRank"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:text="第 3 名"
+					android:textSize="24sp"
+					android:textStyle="bold"
+					app:layout_constraintStart_toStartOf="@id/tvMyRankLabel"
+					app:layout_constraintTop_toBottomOf="@id/tvMyRankLabel"/>
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="40dp"
+					android:background="@color/divider_grey"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@id/guideline"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/tvTotalReductionLabel"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="累计减碳"
+					android:textColor="@color/text_grey"
+					app:layout_constraintStart_toStartOf="@id/guideline"
+					app:layout_constraintTop_toTopOf="@id/tvMyRankLabel"/>
+
+				<TextView
+					android:id="@+id/tvTotalReduction"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:text="128.5 kg"
+					android:textColor="@color/green_dark"
+					android:textSize="20sp"
+					android:textStyle="bold"
+					app:layout_constraintStart_toStartOf="@id/tvTotalReductionLabel"
+					app:layout_constraintTop_toBottomOf="@id/tvTotalReductionLabel"/>
+
+				<androidx.constraintlayout.widget.Guideline
+					android:id="@+id/guideline"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					app:layout_constraintGuide_percent="0.5"/>
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+		</com.google.android.material.card.MaterialCardView>
+
+		<!-- 趋势图表 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingHorizontal="16dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="月度减碳趋势"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				android:layout_marginBottom="8dp"/>
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="300dp"
+				android:id="@+id/temp_chart"
+				/>
+		</LinearLayout>
+
+		<!-- 排行榜列表 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginTop="16dp"
+			android:paddingHorizontal="16dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="社区排行榜"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				android:layout_marginBottom="8dp"/>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rankingRecyclerView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</androidx.core.widget.NestedScrollView>

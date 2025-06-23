@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_grey">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			app:titleTextColor="@android:color/white"
+			android:background="@color/green_primary"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="16dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<!-- 分类选择 -->
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="选择行为类别"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					android:layout_marginBottom="8dp"/>
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rvCategories"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="16dp"/>
+
+				<!-- 选中的类别 -->
+				<com.google.android.material.card.MaterialCardView
+					android:id="@+id/selectedCategory"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:visibility="gone"
+					app:cardCornerRadius="8dp"
+					app:strokeColor="@color/green_primary"
+					app:strokeWidth="1dp">
+
+					<TextView
+						android:id="@+id/tvSelectedCategory"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="16dp"
+						android:text="交通出行"
+						android:textSize="16sp"
+						android:textColor="@color/green_primary"
+						android:drawableStart="@drawable/ic_launcher_background"
+						android:drawablePadding="8dp"/>
+				</com.google.android.material.card.MaterialCardView>
+
+				<!-- 动态表单容器 -->
+				<LinearLayout
+					android:id="@+id/formContainer"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginTop="16dp"/>
+
+				<!-- 计算结果 -->
+				<com.google.android.material.card.MaterialCardView
+					android:id="@+id/resultContainer"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:visibility="gone"
+					android:layout_marginTop="16dp"
+					app:cardBackgroundColor="@color/green_dark"
+					app:cardCornerRadius="8dp">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="16dp"
+						android:orientation="horizontal"
+						android:gravity="center_vertical">
+
+						<ImageView
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:src="@drawable/ic_launcher_background"
+				/>
+
+						<TextView
+							android:id="@+id/tvResult"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="8dp"
+							android:text="本次行为减少碳排放: 2.5 kg"
+							android:textColor="@color/green_dark"
+							android:textSize="16sp"/>
+					</LinearLayout>
+				</com.google.android.material.card.MaterialCardView>
+
+				<!-- 提交按钮 -->
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/btnSubmit"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="24dp"
+					android:text="记录行为"
+					android:textAllCaps="false"
+					app:icon="@drawable/ic_launcher_background"
+					app:iconTint="@android:color/white"
+					app:backgroundTint="@color/green_primary"/>
+
+			</LinearLayout>
+		</androidx.core.widget.NestedScrollView>
+	</com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

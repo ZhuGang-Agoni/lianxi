@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginStart="16dp"
+	android:layout_marginEnd="16dp"
+	android:layout_marginBottom="8dp"
+	app:cardCornerRadius="12dp"
+	app:cardElevation="2dp"
+	app:strokeColor="@color/card_stroke_grey"
+	app:strokeWidth="0.5dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp">
+
+		<!-- 用户头像 -->
+		<de.hdodenhof.circleimageview.CircleImageView
+			android:id="@+id/ivAvatar"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:src="@drawable/ic_launcher_background"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+		<!-- 用户名 -->
+		<TextView
+			android:id="@+id/tvUserName"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="12dp"
+			android:text="用户名"
+			android:textStyle="bold"
+			android:textSize="16sp"
+			android:textColor="@color/black"
+			app:layout_constraintStart_toEndOf="@id/ivAvatar"
+			app:layout_constraintTop_toTopOf="@id/ivAvatar"
+			app:layout_constraintEnd_toStartOf="@id/tvTime"/>
+
+		<!-- 行为类型标签 -->
+		<TextView
+			android:id="@+id/tvActionType"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:text="交通出行"
+			android:paddingHorizontal="8dp"
+			android:paddingVertical="2dp"
+			android:textColor="@color/green_primary"
+			android:textSize="12sp"
+			app:layout_constraintStart_toStartOf="@id/tvUserName"
+			app:layout_constraintTop_toBottomOf="@id/tvUserName"/>
+
+		<!-- 行为描述 -->
+		<TextView
+			android:id="@+id/tvDescription"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="骑自行车上班 8公里"
+			android:textSize="14sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="@id/tvUserName"
+			app:layout_constraintTop_toBottomOf="@id/tvActionType"/>
+
+		<!-- 碳减排信息 -->
+		<LinearLayout
+			android:id="@+id/layoutCarbon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="12dp"
+			android:gravity="center_vertical"
+			app:layout_constraintStart_toStartOf="@id/tvUserName"
+			app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+			<ImageView
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@drawable/ic_launcher_background"/>
+
+			<TextView
+				android:id="@+id/tvCarbonAmount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="4dp"
+				android:text="减少 1.8kg 碳"
+				android:textColor="@color/green_dark"
+				android:textSize="14sp"
+				android:textStyle="bold"/>
+		</LinearLayout>
+
+		<!-- 时间 -->
+		<TextView
+			android:id="@+id/tvTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="2小时前"
+			android:textColor="@color/text_grey"
+			android:textSize="12sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="@id/ivAvatar"/>
+
+		<!-- 互动按钮区域 -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:layout_marginTop="16dp"
+			android:orientation="horizontal"
+			app:layout_constraintTop_toBottomOf="@id/layoutCarbon">
+
+			<!-- 点赞按钮 -->
+			<com.google.android.material.button.MaterialButton
+				style="@style/Widget.App.ActionButton"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="点赞"
+				app:icon="@drawable/ic_launcher_background"
+				app:iconGravity="textStart"/>
+
+			<!-- 评论按钮 -->
+			<com.google.android.material.button.MaterialButton
+				style="@style/Widget.App.ActionButton"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="评论"
+				app:icon="@drawable/ic_launcher_background"
+				app:iconGravity="textStart"/>
+
+			<!-- 分享按钮 -->
+			<com.google.android.material.button.MaterialButton
+				style="@style/Widget.App.ActionButton"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="分享"
+				app:icon="@drawable/ic_launcher_background"
+				app:iconGravity="textStart"/>
+
+		</LinearLayout>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

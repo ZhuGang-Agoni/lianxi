@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<style name="Widget.App.ActionButton" parent="Widget.MaterialComponents.Button.TextButton">
+		<item name="android:insetTop">0dp</item>
+		<item name="android:insetBottom">0dp</item>
+		<item name="android:textColor">@color/text_grey</item>
+		<item name="iconTint">@color/text_grey</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:paddingVertical" tools:targetApi="o" tools:ignore="NewApi">0dp</item>
+		<item name="android:paddingHorizontal" tools:targetApi="o">0dp</item>
+	</style>
+
+
+</resources>

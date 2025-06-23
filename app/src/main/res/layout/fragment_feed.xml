@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white">
+
+	<!-- 动态列表 -->
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/feedRecyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"
+		android:clipToPadding="false"
+		android:scrollbars="vertical"/>
+
+	<!-- 浮动打卡按钮 -->
+	<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+		android:id="@+id/fabAddAction"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|end"
+		android:layout_margin="24dp"
+		android:text="记录低碳行为"
+		android:icon="@drawable/ic_launcher_background"
+		app:backgroundTint="@color/zi"
+		app:iconTint="@android:color/white"
+		app:textColor="@android:color/white"
+		app:elevation="8dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

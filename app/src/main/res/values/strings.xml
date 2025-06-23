@@ -1,0 +1,13 @@
+<resources>
+	<string name="app_name">lianxi</string>
+	<string-array name="vehicles">
+		<item>步行</item>
+		<item>自行车</item>
+		<item>电动车</item>
+		<item>公交车</item>
+		<item>地铁</item>
+		<item>燃油汽车</item>
+		<item>混合动力汽车</item>
+		<item>电动汽车</item>
+	</string-array>
+</resources>

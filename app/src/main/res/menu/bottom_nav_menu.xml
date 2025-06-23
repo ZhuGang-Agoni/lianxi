@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/navigation_feed"
+		android:icon="@drawable/ic_launcher_background"
+		android:title="动态"/>
+
+	<item
+		android:id="@+id/navigation_ranking"
+		android:icon="@drawable/ic_launcher_background"
+		android:title="排行榜"/>
+
+	<item
+		android:id="@+id/navigation_challenges"
+		android:icon="@drawable/ic_launcher_background"
+		android:title="挑战"/>
+
+	<item
+		android:id="@+id/navigation_profile"
+		android:icon="@drawable/ic_launcher_background"
+		android:title="我的"/>
+</menu>
