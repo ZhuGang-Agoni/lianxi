@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         navView.getOrCreateBadge(R.id.navigation_profile).apply {
             backgroundColor = ContextCompat.getColor(this@MainActivity, R.color.zi)
             badgeTextColor = ContextCompat.getColor(this@MainActivity, R.color.white)
-            number = 1
+            number = 1223
             isVisible = true
         }
     }
